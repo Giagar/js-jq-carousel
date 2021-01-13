@@ -11,15 +11,20 @@ $(document).ready(function() {
             .addClass("active");
         }
 
-            
+    })
 
-        
+    $("div.prev").click(function() {
 
+        if($("img.active").hasClass("first")) {
+            $("img.active").removeClass("active")
+            $("img.last").addClass("active")
+        } else {
+            $("img.active")
+            .removeClass("active")
+            .prev()
+            .addClass("active");
+        }
 
-
-        
-        
-      
     })
 })
 
