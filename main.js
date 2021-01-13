@@ -1,5 +1,26 @@
+
 $(document).ready(function() {
+    
+    //_bonus
+    var images = document.querySelectorAll("img");
+    var menu = '';
+    
+    for(var l = 0; l < images.length; l++) {
+
+        if(l === 0) {
+            menu += '<i class="fas fa-circle first active"></i>';
+        } else if (l === images.length - 1) {
+            menu += '<i class="fas fa-circle last"></i>';
+        } else {
+            menu += '<i class="fas fa-circle"></i>';
+        }
+    }
+     
+    document.querySelector(".nav").innerHTML = menu;
+    //_/bonus
+
     $("div.next").click(function() { 
+
         //tutte le classi .fa-circle sono relative al bonus, per la versione base basta toglierle e lasciare il resto così com'è.
         if($("img.active, .fa-circle.active").hasClass("last")) {
             $("img.active, .fa-circle.active").removeClass("active")
