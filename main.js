@@ -1,3 +1,28 @@
+/* tentativo di riduzione ad unica funzione dei condizionali chiamati con next e prev, ma problema nel passare funzione jquery concatenata.
+// function carousel(anchorClass1, anchorClass2, jfn) {
+//     if($("img.active").hasClass(anchorClass1)) {
+//         $("img.active").removeClass("active")
+//         $("img." + anchorClass2).addClass("active")
+//     } else {
+//         $("img.active")
+//         .removeClass("active")
+//         jfn
+//         .addClass("active");
+//     }
+// }
+
+// $(document).ready(function() {
+//         $("div.next").click(function() {
+//             carousel("last", "first", $next())
+//         })
+    
+//         $("div.prev").click(function() {
+//             carousel("first", "last", next())
+    
+//         })
+//     })
+*/
+
 $(document).ready(function() {
     $("div.next").click(function() {
 
@@ -27,15 +52,3 @@ $(document).ready(function() {
 
     })
 })
-
-/*
-var prevButton = document.querySelector(".prev");
-var nextButton = document.querySelector(".next");
-
-nextButton.addEventListener("click", function() {
-    var images = 
-    var currentImage = document.querySelector("img");
-    var nextImage = document.querySelectorAll("img")
-    currentImage.classList.remove("active");
-    var next
-})*/
