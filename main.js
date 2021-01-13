@@ -26,11 +26,11 @@
 $(document).ready(function() {
     $("div.next").click(function() {
 
-        if($("img.active").hasClass("last")) {
-            $("img.active").removeClass("active")
-            $("img.first").addClass("active")
+        if($("img.active, .fa-circle.active").hasClass("last")) {
+            $("img.active, .fa-circle.active").removeClass("active")
+            $("img.first, .fa-circle.first").addClass("active")
         } else {
-            $("img.active")
+            $("img.active, .fa-circle.active")
             .removeClass("active")
             .next()
             .addClass("active");
@@ -40,11 +40,11 @@ $(document).ready(function() {
 
     $("div.prev").click(function() {
 
-        if($("img.active").hasClass("first")) {
-            $("img.active").removeClass("active")
-            $("img.last").addClass("active")
+        if($("img.active, .fa-circle.active").hasClass("first")) {
+            $("img.active, .fa-circle.active").removeClass("active")
+            $("img.last, .fa-circle.last").addClass("active")
         } else {
-            $("img.active")
+            $("img.active, .fa-circle.active")
             .removeClass("active")
             .prev()
             .addClass("active");
